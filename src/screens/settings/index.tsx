@@ -8,7 +8,7 @@ function SettingsScreen({ navigation }: PropsNavSettings): JSX.Element {
       <Text>Settings</Text>
       <Button
         title="Go to Profile"
-        onPress={() => navigation.navigate("profile", { name: "David" })}
+        onPress={() => navigation.navigate("profile", { name: "David" })} //se envia parametros a profile
       />
     </View>
   );
