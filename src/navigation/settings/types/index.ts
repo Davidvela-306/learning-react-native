@@ -2,7 +2,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 type SettingsStackParamList={
     settings: undefined;
-    profile: undefined;
+    profile: { name: string };
     notifications: undefined;
     favorites: undefined;
 };
