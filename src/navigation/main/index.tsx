@@ -2,6 +2,7 @@
 // in this section we add the navigation stacks
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ShopNavigator from "../shop";
+import SettingsNavigator from "../settings";
 
 const Stack = createNativeStackNavigator();
 
@@ -9,6 +10,7 @@ function MainNavigator(): JSX.Element {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Shop" component={ShopNavigator} />
+      <Stack.Screen name="Settings" component={SettingsNavigator} />
     </Stack.Navigator>
   );
 }
