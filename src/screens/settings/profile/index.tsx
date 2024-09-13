@@ -6,7 +6,7 @@ function ProfileScreen({ navigation, route }: PropsNavProfile): JSX.Element {
   const { name } = route.params; //se agrega params desde src\screens\settings\index.tsx
   return (
     <View style={styles.container}>
-      <Text>Settings</Text>
+      <Text>Profile</Text>
       <Text>{name}</Text>
       <Button
         title="Go to settings"
