@@ -4,8 +4,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ShopNavigator from "../shop";
 import SettingsNavigator from "../settings";
 import Feather from "@expo/vector-icons/Feather";
+import InfoNavigator from "../info";
+import { RootStackParamList } from "./types";
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<RootStackParamList>();
 
 function MainNavigator(): JSX.Element {
   return (
@@ -54,6 +56,24 @@ function MainNavigator(): JSX.Element {
               size={24}
               color={focused ? "purple" : "pink"}
             />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Info"
+        component={InfoNavigator}
+        options={{
+          tabBarLabel: "SETTINGS",
+          tabBarLabelStyle: {
+            fontSize: 10,
+          },
+          tabBarStyle: {
+            backgroundColor: "#ffffff",
+          },
+          tabBarActiveTintColor: "red",
+          tabBarInactiveTintColor: "pink",
+          tabBarIcon: ({ focused }) => (
+            <Feather name="info" size={24} color={focused ? "red" : "pink"} />
           ),
         }}
       />
